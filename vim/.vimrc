@@ -245,7 +245,7 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
-map <leader>tab2 :set tabstop=2 shiftwidth=2 expandtab<cr>
+map <leader>tabgo :set tabstop=2 shiftwidth=2 noexpandtab<CR><CR>
 
 
 """"""""""""""""""""""""""""""

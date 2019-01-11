@@ -132,7 +132,7 @@ normal=$'\[\e[m\]'
 export PS1="$white\u@\h:$cyan\\w:$yellow\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)$white\$ "
 export NVM_DIR="/home/yin/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-export PATH="~/arcanist/bin:~/bin:~/bin/flndev:~/bin/fln-tools:/usr/local/go/bin:$PATH"
+export PATH="~/arcanist/bin:~/bin:~/bin/flndev:~/bin/fln-tools:/usr/local/go/bin:/home/yin/go/bin:$PATH"
 source ~/arcanist/resources/shell/bash-completion
 
 # FZF
@@ -141,4 +141,9 @@ source ~/arcanist/resources/shell/bash-completion
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export WORKON_HOME=~/Envs
 source /usr/local/bin/virtualenvwrapper.sh
+
+if [ -f ~/.config/exercism/exercism_completion.bash ]; then
+  . ~/.config/exercism/exercism_completion.bash
+fi
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
